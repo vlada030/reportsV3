@@ -1,6 +1,13 @@
+import { Fragment } from "react"
+import { Link } from "react-router-dom"
+
 const Navbar = () => {
     return (
-        <h2>NAVBAR</h2>
+        <Fragment>
+            <Link to='test'>Bezveze</Link>
+            <Link to='nepostojeca'>Nepostojeca</Link>
+            <Link to='.'>Home</Link>
+        </Fragment>
     )
 }
 
