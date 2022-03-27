@@ -1,13 +1,14 @@
+import { Fragment } from "react"
 import Bezveze from "./Bezveze"
 import {BrowserRouter as Router, Routes,  Link, Route, Outlet} from 'react-router-dom'
 import {Navbar, Sidebar, Modal, Footer} from './components'
 import { LandingPage, HomePage, DomReportsPage, InoReportsPage, ContactPage, ShiftReportsPage} from './pages'
-import { Fragment } from "react"
+import {useGlobalContext} from './context/global_context'
 
 
 const App = () => {
-    
-    const firstPageVisit = false
+
+    const {firstPageVisit} = useGlobalContext()
 
     return (
         <Router>
@@ -29,7 +30,7 @@ const App = () => {
                     }
                 >
                     <Route index element={<HomePage />} />
-                    <Route path="reports">
+                    <Route path="izvestaji">
                         <Route
                             path="domaci_izvestaji"
                             element={<DomReportsPage />}
@@ -48,7 +49,7 @@ const App = () => {
                             <Route path="svi" />
                         </Route>
                     </Route>
-                    <Route path="contact" element={<ContactPage />} />
+                    <Route path="kontakt" element={<ContactPage />} />
                     <Route path="test" element={<Bezveze />} />
                     <Route path="*" element={<h2>NEPOSTOJECA RUTA</h2>} />
                 </Route>
