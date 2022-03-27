@@ -29,7 +29,7 @@ const App = () => {
                     }
                 >
                     <Route index element={<HomePage />} />
-                    <Route path="reports">
+                    <Route path="izvestaji">
                         <Route
                             path="domaci_izvestaji"
                             element={<DomReportsPage />}
@@ -48,7 +48,7 @@ const App = () => {
                             <Route path="svi" />
                         </Route>
                     </Route>
-                    <Route path="contact" element={<ContactPage />} />
+                    <Route path="kontakt" element={<ContactPage />} />
                     <Route path="test" element={<Bezveze />} />
                     <Route path="*" element={<h2>NEPOSTOJECA RUTA</h2>} />
                 </Route>
