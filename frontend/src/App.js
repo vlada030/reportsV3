@@ -1,13 +1,14 @@
+import { Fragment } from "react"
 import Bezveze from "./Bezveze"
 import {BrowserRouter as Router, Routes,  Link, Route, Outlet} from 'react-router-dom'
 import {Navbar, Sidebar, Modal, Footer} from './components'
 import { LandingPage, HomePage, DomReportsPage, InoReportsPage, ContactPage, ShiftReportsPage} from './pages'
-import { Fragment } from "react"
+import {useGlobalContext} from './context/global_context'
 
 
 const App = () => {
-    
-    const firstPageVisit = false
+
+    const {firstPageVisit} = useGlobalContext()
 
     return (
         <Router>
