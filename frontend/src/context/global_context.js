@@ -3,11 +3,7 @@ import {setToLocalStorage, getFromLocalStorage} from '../utils/handleLocalStorag
 
 const initialFirstPageVisit = !getFromLocalStorage('firstPageVisit')
 
-console.log(initialFirstPageVisit);
-
 export const GlobalContext = React.createContext()
-
-
 
 export const GlobalProvider = ({children}) => {
     const [firstPageVisit, setFirstPageVisit] = useState(initialFirstPageVisit)
