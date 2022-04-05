@@ -1,13 +1,13 @@
-import { useEffect } from 'react'
-import {useGlobalContext} from '../context/global_context'
+import { useEffect } from "react";
+import { useGlobalContext } from "../context/global_context";
 import bezZvuka240pCompressedMP4 from "../assets/video/bezZvuka240pCompressedMP4.mp4";
 import bezZvuka240pCompressedWEBM from "../assets/video/bezZvuka240pCompressedWEBM.webm";
 import TFKable_transparent from "../assets/TFKable_transparent.png";
-import { Link } from 'react-router-dom';
+import FKZ from "../assets/FKZ.png"
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
-
-    const {handleFirstPageVisit} = useGlobalContext()
+    const { firstPageVisit, handleFirstPageVisit } = useGlobalContext();
 
     useEffect(() => {
         handleFirstPageVisit()
@@ -26,28 +26,48 @@ const LandingPage = () => {
                 <source src={bezZvuka240pCompressedWEBM} type="video/webm" />
                 Your browser is not supported!
             </video>
-            <div className="absolute inset-0 w-full h-full bg-tfkable-500/70 grid place-content-center">
-                <h1 className="text-2xl text-fkz-700 text-shadow-fkz tracking-wider text-center mb-20">
-                    TF Kable
-                    <span className="block text-3xl mt-8">
-                        Fabrika Kablova Zaječar doo
-                    </span>
-                </h1>
+            <div className="absolute inset-0 w-full h-full bg-tfkable-500/70 flex flex-col justify-evenly">
+                <div className="flex items-center justify-evenly">
+                    <img src={TFKable_transparent} className="h-12" alt="logo_TF Kable"/>
+                    <img src={FKZ} className="h-12" alt="logo_FKZ"/>
+                </div>
 
-                <div className="text-2xl tracking-wider text-center ">
-                    <Link className="block text-tfkable-700 hover:text-fkz-700 transition duration-200 mb-4" to="/izvestaji">
+                <div className="text-center mx-2">
+                    <h1 className="text-2xl text-fkz-700 text-shadow-fkz tracking-wider mb-6">
+                        TF Kable
+                        <span className="block text-3xl mt-4">
+                            Fabrika Kablova Zaječar doo
+                        </span>
+                    </h1>
+                    <p>
+                        Proizvodnja svih vrsta instalacionih provodnika i
+                        distributivnih kablova po najstrožijim standardima!
+                    </p>
+                </div>
+
+                <div className="text-xl tracking-wider text-center ">
+                    <Link
+                        className="block text-tfkable-700 hover:text-fkz-700 transition duration-200 mb-4"
+                        to="izvestaji"
+                    >
                         Izveštaji
                     </Link>
-                    <Link className="block text-tfkable-700 hover:text-fkz-700 transition duration-200 mb-4" to="/izvestaji">
+                    <Link
+                        className="block text-tfkable-700 hover:text-fkz-700 transition duration-200 mb-4"
+                        to="kontakt"
+                    >
                         Kontakti
                     </Link>
-                    <Link className="block text-tfkable-700 hover:text-fkz-700 transition duration-200" to="/home">
+                    <Link
+                        className="block text-tfkable-700 hover:text-fkz-700 transition duration-200"
+                        to="pocetna"
+                    >
                         Preskoči
                     </Link>
                 </div>
             </div>
         </div>
     );
-}
+};
 
-export default LandingPage
+export default LandingPage;

@@ -28,7 +28,7 @@ code {
 
 @layer components {
   .text-shadow-fkz {
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 4px black, 2px 2px 8px black;
   }
   .app-logo-animation {
     animation: App-logo-spin infinite 20s linear;

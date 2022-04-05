@@ -9,7 +9,7 @@ const Navbar = () => {
             <Link to="izvestaji/ino_izvestaji">Ino</Link>
             <Link to="izvestaji/smenski_izvestaji">Smenski</Link>
             <Link to="nepostojeca">Nepostojeca</Link>
-            <Link to=".">Home</Link>
+            <Link to="pocetna">Home</Link>
         </Fragment>
     );
 }

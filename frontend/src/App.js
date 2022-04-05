@@ -1,36 +1,43 @@
-import { Fragment } from "react"
-import Bezveze from "./Bezveze"
-import {BrowserRouter as Router, Routes, Route, Outlet} from 'react-router-dom'
-import {Navbar, Sidebar, Modal, Footer} from './components'
-import { LandingPage, HomePage, DomReportsPage, InoReportsPage, ContactPage, ShiftReportsPage} from './pages'
-import {useGlobalContext} from './context/global_context'
-
+import { Fragment } from "react";
+import Bezveze from "./Bezveze";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Outlet,
+    Navigate,
+} from "react-router-dom";
+import { Navbar, Sidebar, Modal, Footer } from "./components";
+import {
+    LandingPage,
+    HomePage,
+    DomReportsPage,
+    InoReportsPage,
+    ContactPage,
+    ShiftReportsPage,
+} from "./pages";
+import { useGlobalContext } from "./context/global_context";
 
 const App = () => {
-
-    // const {firstPageVisit} = useGlobalContext()
-    const firstPageVisit = true
+    // const { firstPageVisit } = useGlobalContext();
+    const firstPageVisit = true;
 
     return (
         <Router>
             <Routes>
+                <Route path="/" element={firstPageVisit ? <LandingPage /> : <Navigate to="pocetna"/>} />
                 <Route
-                    path="/"
                     element={
-                        firstPageVisit ? (
-                            <LandingPage />
-                        ) : (
-                            <Fragment>
-                                <Navbar />
-                                <Sidebar />
-                                <Modal />
-                                <Outlet />
-                                <Footer />
-                            </Fragment>
-                        )
+                        <Fragment>
+                            <Navbar />
+                            <Sidebar />
+                            <Modal />
+                            <Outlet />
+                            <Footer />
+                        </Fragment>
                     }
                 >
-                    <Route index element={<HomePage />} />
+                    <Route path="pocetna" element={<HomePage />} />
                     <Route path="izvestaji">
                         <Route
                             path="domaci_izvestaji"
@@ -57,6 +64,6 @@ const App = () => {
             </Routes>
         </Router>
     );
-}
+};
 
 export default App;
