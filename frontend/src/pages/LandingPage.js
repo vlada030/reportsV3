@@ -5,6 +5,7 @@ import bezZvuka240pCompressedWEBM from "../assets/video/bezZvuka240pCompressedWE
 import TFKable_transparent from "../assets/TFKable_transparent.png";
 import FKZ from "../assets/FKZ.png"
 import { Link } from "react-router-dom";
+import {BsBoxArrowInRight} from 'react-icons/bs'
 
 const LandingPage = () => {
     const { firstPageVisit, handleFirstPageVisit } = useGlobalContext();
@@ -28,8 +29,12 @@ const LandingPage = () => {
             </video>
             <div className="absolute inset-0 w-full h-full bg-tfkable-500/70 flex flex-col justify-evenly">
                 <div className="flex items-center justify-evenly">
-                    <img src={TFKable_transparent} className="h-12" alt="logo_TF Kable"/>
-                    <img src={FKZ} className="h-12" alt="logo_FKZ"/>
+                    <img
+                        src={TFKable_transparent}
+                        className="h-12"
+                        alt="logo_TF Kable"
+                    />
+                    <img src={FKZ} className="h-12" alt="logo_FKZ" />
                 </div>
 
                 <div className="text-center mx-2">
@@ -45,24 +50,25 @@ const LandingPage = () => {
                     </p>
                 </div>
 
-                <div className="text-xl tracking-wider text-center ">
+                <div className="text-xl text-fkz-700 text-shadow-fkz tracking-wider text-center ">
                     <Link
-                        className="block text-tfkable-700 hover:text-fkz-700 transition duration-200 mb-4"
+                        className="block text-fkz-700 hover:text-fkz-300 transition duration-200 mb-4"
                         to="izvestaji"
                     >
                         Izveštaji
                     </Link>
                     <Link
-                        className="block text-tfkable-700 hover:text-fkz-700 transition duration-200 mb-4"
+                        className="block text-fkz-700 hover:text-fkz-300 transition duration-200 mb-4"
                         to="kontakt"
                     >
                         Kontakti
                     </Link>
                     <Link
-                        className="block text-tfkable-700 hover:text-fkz-700 transition duration-200"
+                        className=" text-fkz-700 hover:text-fkz-300 transition duration-200 inline-flex items-center justify-center leading-none"
                         to="pocetna"
                     >
-                        Preskoči
+                        Dalje
+                        <BsBoxArrowInRight className="w-8 h-auto ml-4"/>
                     </Link>
                 </div>
             </div>
