@@ -1,11 +1,12 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context/global_context";
+import {BsBoxArrowInRight} from 'react-icons/bs'
+
 import bezZvuka240pCompressedMP4 from "../assets/video/bezZvuka240pCompressedMP4.mp4";
 import bezZvuka240pCompressedWEBM from "../assets/video/bezZvuka240pCompressedWEBM.webm";
 import TFKable_transparent from "../assets/TFKable_transparent.png";
 import FKZ from "../assets/FKZ.png"
-import { Link } from "react-router-dom";
-import {BsBoxArrowInRight} from 'react-icons/bs'
 
 const LandingPage = () => {
     const { firstPageVisit, handleFirstPageVisit } = useGlobalContext();
@@ -32,30 +33,29 @@ const LandingPage = () => {
                     <img
                         src={TFKable_transparent}
                         className="h-12"
-                        alt="logo_TF Kable"
+                        alt="logo_TF_Kable"
                     />
                     <img src={FKZ} className="h-12" alt="logo_FKZ" />
                 </div>
 
                 <div className="text-center mx-2">
-                    <h1 className="text-2xl text-fkz-700 text-shadow-fkz tracking-wider mb-6">
+                    <h1 className="text-2xl text-fkz-700 text-shadow-fkz tracking-wider mb-12">
                         TF Kable
                         <span className="block text-3xl mt-4">
                             Fabrika Kablova Zaječar doo
                         </span>
                     </h1>
-                    <p>
-                        Proizvodnja svih vrsta instalacionih provodnika i
-                        distributivnih kablova po najstrožijim standardima!
+                    <p className="text-xl text-light uppercase tracking-wider leading-10 bg-tfkable-700 rounded-md skew-y-[-10deg] shadow-xl">
+                        najpovoljnije cene prepoznatljiv kvalitet
                     </p>
                 </div>
 
-                <div className="text-xl text-fkz-700 text-shadow-fkz tracking-wider text-center ">
+                <div className="text-xl text-fkz-700 text-shadow-fkz tracking-wider text-center lg:w-[1024px] lg:flex lg:items-center lg:justify-center">
                     <Link
                         className="block text-fkz-700 hover:text-fkz-300 transition duration-200 mb-4"
                         to="izvestaji"
                     >
-                        Izveštaji
+                        Cenovnik
                     </Link>
                     <Link
                         className="block text-fkz-700 hover:text-fkz-300 transition duration-200 mb-4"
@@ -64,11 +64,11 @@ const LandingPage = () => {
                         Kontakti
                     </Link>
                     <Link
-                        className=" text-fkz-700 hover:text-fkz-300 transition duration-200 inline-flex items-center justify-center leading-none"
+                        className=" text-fkz-700 hover:text-fkz-300 transition duration-200 inline-flex items-center justify-center "
                         to="pocetna"
                     >
-                        Dalje
-                        <BsBoxArrowInRight className="w-8 h-auto ml-4"/>
+                        Početna
+                        <BsBoxArrowInRight className="w-8 h-auto ml-4 mt-2" />
                     </Link>
                 </div>
             </div>
