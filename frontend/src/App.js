@@ -15,17 +15,19 @@ import {
     InoReportsPage,
     ContactPage,
     ShiftReportsPage,
+    AuthenticationPage
 } from "./pages";
 import { useGlobalContext } from "./context/global_context";
 
 const App = () => {
     // const { firstPageVisit } = useGlobalContext();
-    const firstPageVisit = true;
+    const firstPageVisit = false;
 
     return (
         <Router>
             <Routes>
-                <Route path="/" element={firstPageVisit ? <LandingPage /> : <Navigate to="pocetna"/>} />
+                <Route path="/" element={firstPageVisit ? <LandingPage /> : <Navigate to="login"/>} />
+                <Route path="login" element={<AuthenticationPage />} />
                 <Route
                     element={
                         <Fragment>

@@ -15,6 +15,10 @@ module.exports = {
                     300: "#f9ba0d",
                 }
             },
+
+            backgroundImage: {
+                'login-hero': "url(/src/assets/pogon-3.JPG)"
+            }
         },
     },
     plugins: [],

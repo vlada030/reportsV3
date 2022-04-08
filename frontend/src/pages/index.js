@@ -4,6 +4,7 @@ import DomReportsPage from './DomReportsPage'
 import InoReportsPage from './InoReportsPage'
 import ShiftReportsPage from './ShiftReportsPage'
 import ContactPage from './ContactPage'
+import AuthenticationPage from './AuthenticationPage'
 
 export {
     LandingPage, 
@@ -11,5 +12,6 @@ export {
     DomReportsPage,
     InoReportsPage,
     ShiftReportsPage,
-    ContactPage
+    ContactPage,
+    AuthenticationPage
 }
