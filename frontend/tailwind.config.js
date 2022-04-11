@@ -17,7 +17,8 @@ module.exports = {
             },
 
             backgroundImage: {
-                'login-hero': "url(/src/assets/pogon-3.JPG)"
+                'login-hero': "url(/src/assets/pogon-3.JPG)",
+                'login-form': "url(/src/assets/pogon-7.JPG)",
             }
         },
     },
