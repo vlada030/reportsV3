@@ -2,23 +2,19 @@ export default function AuthenticationButton({
     children,
     operation,
     handleButtonClick,
-    active,
+    activeForm,
 }) {
-    const updatedClass =
-        active === operation
-            ? "w-full bg-tfkable-300 flex flex-col items-center justify-center py-8"
-            : "w-full bg-fkz-300 hover:bg-fkz-800 flex flex-col items-center justify-center py-8";
-
-            console.log(updatedClass);
+    const colorClass =
+        activeForm === operation ? "bg-fkz-700" : "bg-fkz-300 hover:bg-fkz-500";
 
     return (
-        <div>
+        <div className="border-b border-slate-400">
             <button
-                className={updatedClass}
+                className={`w-full flex flex-col items-center justify-center py-8 ${colorClass} transition-colors duration-200`}
                 onClick={() => handleButtonClick(operation)}
             >
                 {children}
-                <span className="text-2xl">{operation}</span>
+                <span className="text-xl">{operation}</span>
             </button>
         </div>
     );

@@ -4,6 +4,7 @@ import Modal from './Modal'
 import Footer from './Footer'
 import AuthenticationForms from './AuthenticationForms'
 import AuthenticationButton from './AuthenticationButton'
+import LoginForm from './LoginForm'
 
 export {
     Navbar,
@@ -11,5 +12,6 @@ export {
     Modal, 
     Footer,
     AuthenticationForms,
-    AuthenticationButton
+    AuthenticationButton,
+    LoginForm
 }

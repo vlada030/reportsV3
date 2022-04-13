@@ -2,48 +2,48 @@ import { useState } from "react";
 import { AiOutlineUser, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 
-import { AuthenticationButton } from ".";
+import { AuthenticationButton, LoginForm } from ".";
 
 export default function AuthenticationForms() {
-    const [active, setActive] = useState('Login')
+    const [activeForm, setActiveForm] = useState('Prijava')
 
     const handleButtonClick = (operation) => {
-        console.log(`Kliknuto je dugme ${operation}`);
-        setActive(operation)
+        setActiveForm(operation)
     }
 
     return (
-        <div className="w-11/12 rounded z-10">
+        <div className="w-11/12 rounded overflow-hidden z-10">
             <AuthenticationButton
-                operation="Login"
+                operation="Prijava"
                 handleButtonClick={handleButtonClick}
-                active
+                activeForm={activeForm}
             >
                 <AiOutlineUser className="w-12 h-auto" />
             </AuthenticationButton>
 
-            <div className="hidden">LOGIN_FORM</div>
+            <LoginForm activeForm={activeForm} />
 
             <AuthenticationButton
-                operation="Register"
+                operation="Registracija"
                 handleButtonClick={handleButtonClick}
-                active
+                activeForm={activeForm}
             >
                 <AiOutlineUsergroupAdd className="w-12 h-auto" />
             </AuthenticationButton>
 
-            <div className="hidden">REGISTER_FORM</div>
+            <LoginForm activeForm={activeForm} />
 
             <AuthenticationButton
-                operation="Forgot Password"
+                operation="Zaboravljena šifra?"
                 handleButtonClick={handleButtonClick}
-                active
+                activeForm={activeForm}
             >
                 <RiLockPasswordLine className="w-12 h-auto" />
             </AuthenticationButton>
 
-            <div className="hidden">RESET_PASSWORD_FORM</div>
-            <div className="h-48 bg-login-form bg-no-repeat bg-cover bg-center rounded"></div>
+            <LoginForm activeForm={activeForm} />
+            
+            <div className="h-48 bg-login-form bg-no-repeat bg-cover bg-center"></div>
         </div>
     );
 }
