@@ -12,7 +12,7 @@ export default function AuthenticationForms() {
     }
 
     return (
-        <div className="w-11/12 rounded overflow-hidden z-10">
+        <div className="w-11/12 rounded overflow-hidden my-10 z-10">
             <AuthenticationButton
                 operation="Prijava"
                 handleButtonClick={handleButtonClick}
@@ -31,7 +31,6 @@ export default function AuthenticationForms() {
                 <AiOutlineUsergroupAdd className="w-12 h-auto" />
             </AuthenticationButton>
 
-            <LoginForm activeForm={activeForm} />
 
             <AuthenticationButton
                 operation="Zaboravljena šifra?"
@@ -41,7 +40,6 @@ export default function AuthenticationForms() {
                 <RiLockPasswordLine className="w-12 h-auto" />
             </AuthenticationButton>
 
-            <LoginForm activeForm={activeForm} />
             
             <div className="h-48 bg-login-form bg-no-repeat bg-cover bg-center"></div>
         </div>

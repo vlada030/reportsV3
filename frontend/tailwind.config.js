@@ -13,13 +13,14 @@ module.exports = {
                     700: "#ff6600",
                     500: "#f7a206",
                     300: "#f9ba0d",
-                }
+                    100: "#f8e2a5",
+                },
             },
 
             backgroundImage: {
-                'login-hero': "url(/src/assets/pogon-3.JPG)",
-                'login-form': "url(/src/assets/pogon-7.JPG)",
-            }
+                "login-hero": "url(/src/assets/pogon-3.JPG)",
+                "login-form": "url(/src/assets/pogon-7.JPG)",
+            },
         },
     },
     plugins: [],
